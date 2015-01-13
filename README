@@ -1,7 +1,11 @@
-These are some primitive examples for CORBA interaction, straight from the OMNIOrb and Java tutorials.
-You can run the different client / servers against each other.
+This is a primitive CORBA echo server (and client) in three languages, straight from the OMNIOrb and Java tutorials:
 
-Everything is optimized to be minimal, including the Makefile's.
+http://omniorb.sourceforge.net/omni42/omniORB/index.html
+http://docs.oracle.com/javase/7/docs/technotes/guides/idl/jidlExample.html
+
+You can run the different client / servers against each other for 'CORBA is cool' demonstrations.
+
+Everything is optimized to be minimal, including the Makefile's. Therefore, the usage of a naming service is ommitted.
 
 All code was tested on MacOS X Yosemite, with an OMNIOrb installation from Homebrew.
 
@@ -13,6 +17,13 @@ Python
 - Start the server with "python server.py". It will print the server IOR to be used by the client.
 - Start the client with "python client.py <IOR>".
 
+C++
+---
+- Install OMNIOrb.
+- Go into the ./cxx subdirectory.
+- (Optional) Re-generate stubs and skeletons with "omniorb -bcxx ../echo.idl".
+- Call "make" to build client and server.
+
 Java
 ----
 - Install a recent JDK.
@@ -21,11 +32,4 @@ Java
 - Call "make" to build the JAR files for client and server.
 - Run the server with "java -jar server.jar".  It will print the server IOR to be used by the client.
 - Run the client with "java -jar client.jar <IOR>".
-
-C++
----
-- Install OMNIOrb.
-- Go into the ./cxx subdirectory.
-- (Optional) Re-generate stubs and skeletons with "omniorb -bcxx ../echo.idl".
-- Call "make" to build client and server.
 

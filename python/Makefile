@@ -1,5 +1,5 @@
 all:
-	# Do nothing, this is Python
+
 
 clean:
 	rm -f *.pyc
