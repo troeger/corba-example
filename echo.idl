@@ -1,0 +1,6 @@
+module Example {
+	interface Echo {
+		string echoString(in string mesg);
+	};
+};
+
