@@ -30,7 +30,7 @@ int main(int argc, char** argv)
 		poa->activate_object(server);
 
 		CORBA::String_var sior(orb->object_to_string(server->_this()));
-		cerr << sior << endl;
+		cout << sior << endl;
 
 	 	PortableServer::POAManager_var pman = poa->the_POAManager();
 		pman->activate();
