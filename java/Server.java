@@ -7,7 +7,7 @@ import java.util.Properties;
 
 class EchoServer extends EchoPOA {
   public String echoString (String mesg) {
-    System.out.println("Requested to echo this: "+mesg);
+    System.out.println("Got \"" + mesg + "\", sending it back.");
     return mesg;
   }
 }
@@ -29,7 +29,6 @@ public class Server {
       // get object reference from the servant
       org.omg.CORBA.Object ref = rootpoa.servant_to_reference(server);
           
-      System.out.println("HelloServer ready and waiting ...");
       System.out.println(ref);
 
       // wait for invocations from clients

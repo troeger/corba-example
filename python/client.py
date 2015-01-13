@@ -8,10 +8,10 @@ obj = orb.string_to_object(ior)
 eo = obj._narrow(Example.Echo)
 
 if eo is None:
-  print "Object reference is not an Example::Echo"
+  print "Can't narrow reference."
   sys.exit(1)
 
 message = "Hello from Python"
-result  = eo.echoString(message)
-
-print "I said '%s'. The object said '%s'." % (message,result)
+print "Sending: "+message
+result = eo.echoString(message)
+print "Got back: "+result

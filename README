@@ -3,7 +3,7 @@ This is a primitive CORBA echo server (and client) in three languages, straight 
 http://omniorb.sourceforge.net/omni42/omniORB/index.html
 http://docs.oracle.com/javase/7/docs/technotes/guides/idl/jidlExample.html
 
-You can run the different client / servers against each other for 'CORBA is cool' demonstrations.
+You can run the different client / servers against each other for some 'CORBA is cool' demonstrations.
 
 Everything is optimized to be minimal, including the Makefile's. Therefore, the usage of a naming service is ommitted.
 

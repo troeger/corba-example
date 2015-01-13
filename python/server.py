@@ -4,7 +4,7 @@ import Example, Example__POA
 
 class EchoServer (Example__POA.Echo):
   def echoString(self, mesg):
-    print "echoString() called with message:", mesg
+    print "Got \"%s\", sending it back."%msg
     return mesg
 
 orb = CORBA.ORB_init(sys.argv, CORBA.ORB_ID)

@@ -14,7 +14,7 @@ public:
 
 char* Server::echoString(const char* mesg)
 {
-  cout << "Got request to echo this: " << mesg << endl;
+  cout << "Got \"" << mesg << "\", sending it back." << endl;
   return CORBA::string_dup(mesg);
 }
 

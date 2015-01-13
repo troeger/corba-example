@@ -4,6 +4,7 @@ import org.omg.CORBA.*;
 public class Client
 {
   static Echo echoImpl;
+  static String message = "Hello from Java";
 
   public static void main(String args[])
     {
@@ -15,8 +16,9 @@ public class Client
         org.omg.CORBA.Object objRef = orb.string_to_object(args[0]);
         echoImpl = EchoHelper.narrow(objRef);
 
-        System.out.println("Obtained a handle on server object: " + echoImpl);
-        System.out.println(echoImpl.echoString("Hello from Java"));
+        System.out.println("Sending: "+message);
+        String result = echoImpl.echoString(message);
+        System.out.println("Got back: "+result);
 
         } 
         catch (Exception e) {

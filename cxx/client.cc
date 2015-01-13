@@ -4,12 +4,10 @@ using namespace std;
 
 static void hello(Example::Echo_ptr e)
 {
-  CORBA::String_var src = (const char*) "Hello!";
-
-  CORBA::String_var dest = e->echoString(src);
-
-  cout << "I said, \"" << (char*)src << "\"." << endl
-       << "The Echo object replied, \"" << (char*)dest <<"\"." << endl;
+  CORBA::String_var src = (const char*) "Hello from C++";
+  cout << "Sending: " << (char*)src << endl;
+  CORBA::String_var result = e->echoString(src);
+  cout << "Got back: " << (char*)result << endl;
 }
 
 int main(int argc, char** argv)
@@ -27,13 +25,11 @@ int main(int argc, char** argv)
     Example::Echo_var echoref = Example::Echo::_narrow(obj);
 
     if (CORBA::is_nil(echoref)) {
-      cerr << "Can't narrow reference to type Echo (or it was nil)." << endl;
+      cerr << "Can't narrow reference." << endl;
       return 1;
     }
 
-    for (CORBA::ULong count=0; count<10; count++)
-      hello(echoref);
-
+    hello(echoref);
     orb->destroy();
   }
   catch (CORBA::TRANSIENT&) {
