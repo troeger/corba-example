@@ -1,20 +1,31 @@
-Some primitive Hello World examples for CORBA interaction.
+These are some primitive examples for CORBA interaction, straight from the OMNIOrb and Java tutorials.
+You can run the different client / servers against each other.
+
+Everything is optimized to be minimal, including the Makefile's.
+
+All code was tested on MacOS X Yosemite, with an OMNIOrb installation from Homebrew.
 
 Python
 ------
 - Install OMNIOrb, test that it is available as Python package (import OMNIOrb).
 - Go into the ./python subdirectory.
-- If needed, re-generate stubs and skeletons with "omniorb -bpython ../echo.idl".
-- Start the server.
-- Start the client with the server IOR as command-line argument.
+- (Optional) Re-generate stubs and skeletons with "omniorb -bpython ../echo.idl".
+- Start the server with "python server.py". It will print the server IOR to be used by the client.
+- Start the client with "python client.py <IOR>".
 
 Java
 ----
 - Install a recent JDK.
 - Go into the ./java subdirectory.
-- If needed, re-generate stubs and skeletons with "idlj -fall ../echo.idl".
+- (Optional) Re-generate stubs and skeletons with "idlj -fall ../echo.idl".
 - Call "make" to build the JAR files for client and server.
-- Run the server with "java -jar server.jar".
-- Run the client with "java -jar client.jar", provide the server IOR as command-line argument.
+- Run the server with "java -jar server.jar".  It will print the server IOR to be used by the client.
+- Run the client with "java -jar client.jar <IOR>".
 
+C++
+---
+- Install OMNIOrb.
+- Go into the ./cxx subdirectory.
+- (Optional) Re-generate stubs and skeletons with "omniorb -bcxx ../echo.idl".
+- Call "make" to build client and server.
 
