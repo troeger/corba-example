@@ -1,0 +1,20 @@
+Some primitive Hello World examples for CORBA interaction.
+
+Python
+------
+- Install OMNIOrb, test that it is available as Python package (import OMNIOrb).
+- Go into the ./python subdirectory.
+- If needed, re-generate stubs and skeletons with "omniorb -bpython ../echo.idl".
+- Start the server.
+- Start the client with the server IOR as command-line argument.
+
+Java
+----
+- Install a recent JDK.
+- Go into the ./java subdirectory.
+- If needed, re-generate stubs and skeletons with "idlj -fall ../echo.idl".
+- Call "make" to build the JAR files for client and server.
+- Run the server with "java -jar server.jar".
+- Run the client with "java -jar client.jar", provide the server IOR as command-line argument.
+
+
