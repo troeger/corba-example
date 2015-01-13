@@ -23,6 +23,8 @@ All code was tested on MacOS X Yosemite, with an OMNIOrb installation from Homeb
 - Go into the ./cxx subdirectory.
 - (Optional) Re-generate stubs and skeletons with "omniorb -bcxx ../echo.idl".
 - Call "make" to build client and server.
+- Start the server with ./server". It will print the server IOR to be used by the client.
+- Start the client with "./client <IOR>".
 
 ## Java
 - Install a recent JDK.
