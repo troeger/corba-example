@@ -1,6 +1,6 @@
 # CORBA Echo Server
 
-This is a primitive CORBA echo server (and client) in three languages, straight from the OMNIOrb and Java tutorials:
+This is a primitive CORBA echo server (and client) in four languages, straight from the OMNIOrb and Java tutorials:
 
 http://omniorb.sourceforge.net/omni42/omniORB/index.html
 http://docs.oracle.com/javase/7/docs/technotes/guides/idl/jidlExample.html
@@ -23,6 +23,14 @@ All code was tested on MacOS X Yosemite, with an OMNIOrb installation from Homeb
 - Go into the ./cxx subdirectory.
 - (Optional) Re-generate stubs and skeletons with "omniorb -bcxx ../echo.idl".
 - Call "make" to build client and server.
+- Start the server with ./server". It will print the server IOR to be used by the client.
+- Start the client with "./client <IOR>".
+
+## C++11
+- Obtain and install TAOX11, see http://www.remedy.nl/en/taox11
+- Go into the ./cxx11 subdirectory.
+- Call "brix11 gen build" to generate the GNU makefiles
+- Call "make" to build the client and server
 - Start the server with ./server". It will print the server IOR to be used by the client.
 - Start the client with "./client <IOR>".
 
