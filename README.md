@@ -9,8 +9,6 @@ All server appliations print their IOR and block then. All client applications t
 
 Everything is optimized to be small, including the Makefile's. Therefore, the usage of a naming service is ommitted.
 
-All code was tested on MacOS X Yosemite, with an omniORB installation from Homebrew.
-
 ## Python
 - Install omniORB, test that it is available as Python package (import OMNIOrb).
 - Go into the ./python subdirectory.
@@ -48,3 +46,15 @@ All code was tested on MacOS X Yosemite, with an omniORB installation from Homeb
 - No need to run an IDL compiler
 - Start the server with "ruby server.rb". It will print the server IOR to be used by the client.
 - Start the client with "ruby client.rb <IOR>".
+
+# Compatibility Matrix
+
+The following table shows which combinations of operating system and ORB product were reported to work with the different variants.
+
+|                      | openSuSE 13.2  | MacOS X Yosemite  |
+|----------------------|----------------|-------------------|
+| omniORB 4.1.7        |                | Python, C++       |
+| JDK 1.8              |                | Java              |
+| Remedy R2CORBA 1.4.1 | Ruby           |                   |
+| Remedy TAOX11 1.3.2  | C++11          |                   |
+
