@@ -1,6 +1,6 @@
 # CORBA Echo Server
 
-This is a primitive CORBA echo server (and client) in four languages, straight from the OMNIOrb and Java tutorials:
+This is a primitive CORBA echo server (and client) in five languages, straight from the omniORB and Java tutorials:
 
 http://omniorb.sourceforge.net/omni42/omniORB/index.html
 http://docs.oracle.com/javase/7/docs/technotes/guides/idl/jidlExample.html
@@ -9,21 +9,21 @@ All server appliations print their IOR and block then. All client applications t
 
 Everything is optimized to be small, including the Makefile's. Therefore, the usage of a naming service is ommitted.
 
-All code was tested on MacOS X Yosemite, with an OMNIOrb installation from Homebrew.
+All code was tested on MacOS X Yosemite, with an omniORB installation from Homebrew.
 
 ## Python
-- Install OMNIOrb, test that it is available as Python package (import OMNIOrb).
+- Install omniORB, test that it is available as Python package (import OMNIOrb).
 - Go into the ./python subdirectory.
 - (Optional) Re-generate stubs and skeletons with "omniorb -bpython ../echo.idl".
 - Start the server with "python server.py". It will print the server IOR to be used by the client.
 - Start the client with "python client.py <IOR>".
 
 ## C++
-- Install OMNIOrb.
+- Install omniORB.
 - Go into the ./cxx subdirectory.
 - (Optional) Re-generate stubs and skeletons with "omniorb -bcxx ../echo.idl".
 - Call "make" to build client and server.
-- Start the server with ./server". It will print the server IOR to be used by the client.
+- Start the server with "./server". It will print the server IOR to be used by the client.
 - Start the client with "./client <IOR>".
 
 ## C++11
@@ -31,7 +31,7 @@ All code was tested on MacOS X Yosemite, with an OMNIOrb installation from Homeb
 - Go into the ./cxx11 subdirectory.
 - Call "brix11 gen build" to generate the GNU makefiles
 - Call "make" to build the client and server
-- Start the server with ./server". It will print the server IOR to be used by the client.
+- Start the server with "./server". It will print the server IOR to be used by the client.
 - Start the client with "./client <IOR>".
 
 ## Java
@@ -42,3 +42,9 @@ All code was tested on MacOS X Yosemite, with an OMNIOrb installation from Homeb
 - Run the server with "java -jar server.jar".  It will print the server IOR to be used by the client.
 - Run the client with "java -jar client.jar <IOR>".
 
+## Ruby
+- Install R2CORBA, see http://www.remedy.nl/en/r2corba
+- Go into the ./ruby subdirectory.
+- No need to run an IDL compiler
+- Start the server with "ruby server.rb". It will print the server IOR to be used by the client.
+- Start the client with "ruby client.rb <IOR>".

@@ -23,19 +23,19 @@ int main(int argc, char** argv)
     IDL::traits<CORBA::Object>::ref_type obj = orb->resolve_initial_references ("RootPOA");
     IDL::traits<PortableServer::POA>::ref_type poa = IDL::traits<PortableServer::POA>::narrow (obj);
 
-   CORBA::servant_traits<Example::Echo>::ref_type server = CORBA::make_reference<Server> ();
+    CORBA::servant_traits<Example::Echo>::ref_type server = CORBA::make_reference<Server> ();
 
-   PortableServer::ObjectId id = poa->activate_object (server);
+    PortableServer::ObjectId id = poa->activate_object (server);
 
-   std::string sior(orb->object_to_string(server->_this()));
-   std::cout << sior << std::endl;
+    std::string sior(orb->object_to_string(server->_this()));
+    std::cout << sior << std::endl;
 
-   IDL::traits<PortableServer::POAManager>::ref_type pman = poa->the_POAManager ();
+    IDL::traits<PortableServer::POAManager>::ref_type pman = poa->the_POAManager ();
 
-   pman->activate();
+    pman->activate();
 
-   orb->run();
-   orb->destroy();
+    orb->run();
+    orb->destroy();
   }
   catch (CORBA::SystemException& ex) {
     std::cerr << "Caught CORBA::" << ex << std::endl;

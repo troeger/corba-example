@@ -3,7 +3,7 @@
 
 static void hello(IDL::traits<Example::Echo>::ref_type e)
 {
-  std::string src ("Hello from C++");
+  std::string src ("Hello from C++11");
   std::cout << "Sending: " << src << std::endl;
   std::string result = e->echoString(src);
   std::cout << "Got back: " << result << std::endl;
