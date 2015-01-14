@@ -18,7 +18,7 @@ std::string Server::echoString(const std::string& mesg)
 
 int main(int argc, char** argv)
 {
-	try {
+  try {
     IDL::traits<CORBA::ORB>::ref_type orb = CORBA::ORB_init (argc, argv);
     IDL::traits<CORBA::Object>::ref_type obj = orb->resolve_initial_references ("RootPOA");
     IDL::traits<PortableServer::POA>::ref_type poa = IDL::traits<PortableServer::POA>::narrow (obj);
