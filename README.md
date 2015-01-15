@@ -49,7 +49,7 @@ Everything is optimized to be small, including the Makefile's. Therefore, the us
 
 # Compatibility Matrix
 
-The following table shows which combinations of operating system and ORB product were reported to work with the different variants.
+The following table shows which combinations of operating system and ORB product were reported to work with the different language implementations.
 
 |                      | openSuSE 13.2  | MacOS X Yosemite  |
 |----------------------|----------------|-------------------|
