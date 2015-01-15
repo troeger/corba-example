@@ -1,13 +1,17 @@
 LIBS = -lomnithread -lomniORB4 
-#-lCOS4 -lCOSDynamic4 -lomniCodeSets4 -lomniConnectionMgmt4 -lomniDynamic4 
+STUBS = echoSK.cc 
+STUB_HEADERS = echo.hh
 
 all: server client
 
-server: server.cc echoSK.cc
-	g++ -o server $(LIBS) server.cc echoSK.cc
+$(STUBS): ../echo.idl
+	omniidl -bcxx ../echo.idl
 
-client: client.cc 
-	g++ -o client $(LIBS) client.cc echoSK.cc
+server: server.cc $(STUBS)
+	g++ -o server $(LIBS) server.cc $(STUBS)
+
+client: client.cc $(STUBS)
+	g++ -o client $(LIBS) client.cc $(STUBS)
 
 clean:
-	rm -f client server
+	rm -f client server $(STUBS) $(STUB_HEADERS)
