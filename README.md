@@ -43,7 +43,7 @@ All code was tested on MacOS X Yosemite, with an omniORB installation from Homeb
 - Run the client with "java -jar client.jar <IOR>".
 
 ## Ruby
-- Install R2CORBA, see http://www.remedy.nl/products/r2corba.htmla
+- Install R2CORBA, see http://www.remedy.nl/products/r2corba.html
 - Go into the ./ruby subdirectory.
 - No need to run an IDL compiler
 - Start the server with "ruby server.rb". It will print the server IOR to be used by the client.
