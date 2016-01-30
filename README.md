@@ -41,7 +41,7 @@ Everything is optimized to be small, including the Makefiles. Therefore, the usa
 - Run the client with "java -jar client.jar <IOR>".
 
 ## Ruby
-- Install R2CORBA, see http://www.remedy.nl/en/r2corba
+- Install R2CORBA, see http://www.remedy.nl/products/r2corba.htmla
 - Go into the ./ruby subdirectory.
 - No need to run an IDL compiler
 - Start the server with "ruby server.rb". It will print the server IOR to be used by the client.
