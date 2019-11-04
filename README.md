@@ -25,7 +25,7 @@ Everything is optimized to be small, including the Makefiles. Therefore, the usa
 - Start the client with "./client <IOR>".
 
 ## C++11
-- Obtain and install TAOX11, see http://taox11.remedy.nl
+- Obtain and install TAOX11, see https://www.taox11.org
 - Go into the ./cxx11 subdirectory.
 - Call "brix11 gen build" to generate the GNU makefiles
 - Call "make" to build the client and server
