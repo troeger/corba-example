@@ -6,7 +6,7 @@ class Server : public CORBA::servant_traits<Example::Echo>::base_type
 {
 public:
   Server() = default;
-  virtual ~Server() {};
+  virtual ~Server() = default;
   virtual std::string echoString(const std::string& mesg) override;
 };
 

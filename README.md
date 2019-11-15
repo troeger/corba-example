@@ -25,7 +25,7 @@ Everything is optimized to be small, including the Makefiles. Therefore, the usa
 - Start the client with "./client <IOR>".
 
 ## C++11
-- Obtain and install TAOX11, see http://taox11.remedy.nl
+- Obtain and install TAOX11, see https://www.taox11.org
 - Go into the ./cxx11 subdirectory.
 - Call "brix11 gen build" to generate the GNU makefiles
 - Call "make" to build the client and server
@@ -41,7 +41,7 @@ Everything is optimized to be small, including the Makefiles. Therefore, the usa
 - Run the client with "java -jar client.jar <IOR>".
 
 ## Ruby
-- Install R2CORBA, see http://www.remedy.nl/products/r2corba.html
+- Install R2CORBA, see http://www.remedy.nl/opensource/r2corba.html
 - Go into the ./ruby subdirectory.
 - No need to run an IDL compiler
 - Start the server with "ruby server.rb". It will print the server IOR to be used by the client.
